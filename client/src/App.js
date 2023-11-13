@@ -6,7 +6,7 @@ const socket = io.connect("https://websocket-test-ad1c.onrender.com");
 
 function App() {
   const sendMessage = () => {
-    // socket.emit()
+    socket.emit("send", {message: "Hello"});
   }
   return (
     <div className="App"> 
