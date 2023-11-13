@@ -4,18 +4,21 @@
 name: Node.js Package
   
 on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - client/**
   release:
     types: [created]
-    workflow_dispatch:
-    push:
-      branches:
-        - main
-      paths:
-        - client/**
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
