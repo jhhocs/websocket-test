@@ -5,9 +5,13 @@ import io from "socket.io-client"
 const socket = io.connect("https://websocket-test-ad1c.onrender.com");
 
 function App() {
+  const sendMessage = () => {
+    // socket.emit()
+  }
   return (
     <div className="App"> 
-
+      <input placeholder = "Message"/>
+      <button onClick = {sendMessage}> Send Message</button>
     </div>
   );
 }
