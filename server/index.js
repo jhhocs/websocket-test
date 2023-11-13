@@ -13,7 +13,7 @@ const server = createServer(app);
 const io = new Server(server, {
     cors: {
         //origin: "http://localhost:3000",
-        origin: ["http://localhost:3000", "http://jhhocs.github.io"]
+        origin: ["http://localhost:3000", "http://jhhocs.github.io", "http://jhhocs.github.io/test/"]
     }
 });
 // const router = express.Router();
