@@ -56,6 +56,12 @@ jobs:
       
     # - run: npm run build --if-present
 
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        # Upload entire repository
+        path: './client'
+
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
